@@ -157,6 +157,7 @@ def key_task():
         if keyboard.is_pressed('enter'):
             time.sleep(0.2)
             YiDong_sta(1)
+        time.sleep(0.1)
 # 主函数
 def main():
     task_ok = 0
