@@ -163,6 +163,7 @@ def main():
     task_ok = 0
     stop_sta(2) # 初始化暂停状态
     YiDong_sta(2)
+    global thread
     thread = threading.Thread(target=key_task) # 创建线程
     thread.start() # 启动线程
     time.sleep(2)
