@@ -195,6 +195,7 @@ def main():
     qw_path = ".\\img\\qw.png"
     hd_path = ".\\img\\hd.png"
     gz_path = ".\\img\\gz.png"
+    gz_jc_path = ".\\img\\gz_jc.png"
     xj_path = ".\\img\\xj.png"
     shi_path = ".\\img\\shi.png"
     lw_path = ".\\img\\lw.png"
@@ -218,6 +219,7 @@ def main():
         hd_points = [(518, 107), (248, 986), (241, 275), (480, 533), (430, 597)]  # 蝴蝶
 
     gz_points = [(518, 107), (248, 986), (511, 924), (434, 691), (551, 592)]  # 罐子
+    gz_jc_points = [(600, 700)]
     xj_points = [(518, 107), (248, 986), (717, 674), (480, 839), (480, 839), (518, 107)]  # 
     lw_points = [(518, 107), (480, 623), (518, 107)]
     jl_points = [(562, 585)]
@@ -282,6 +284,9 @@ def main():
                 log('罐子匹配成功')
                 perform_click_actions(gz_points)
                 time.sleep(40)
+                if find_template_in_region(region, gz_jc_path, '罐子纠错', 0.8):
+                    log('罐子纠错匹配成功')
+                    click(600, 700)
 
             elif find_template_in_region(region, xj_path, '相机', 0.7):
                 log('相机匹配成功')
